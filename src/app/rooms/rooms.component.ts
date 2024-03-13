@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SharedModule } from '../shared.module';
 
 @Component({
@@ -9,5 +9,10 @@ import { SharedModule } from '../shared.module';
   styleUrl: './rooms.component.css'
 })
 export class RoomsComponent {
+    @Input() title: any;
 
+    @Output() sayHello = new EventEmitter<string>();
+    sayHelloToParent() {
+        this.sayHello.emit('Hello from the RoomsComponent');
+    }
 }
