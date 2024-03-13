@@ -7,8 +7,9 @@ import { SharedModule } from './shared.module';
   standalone: true,
   imports: [RouterOutlet, SharedModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'hotel-angular';
+  isNavbarCollapsed = true;
 }
